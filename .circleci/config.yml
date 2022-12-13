@@ -89,10 +89,10 @@ jobs:
           name: Scan frontend dependencies
           command: |
             cd backend
+            rm -r node_modules
             npm install
-            npm audit fix --audit-level=critical --force
-            npm audit fix --audit-level=critical --force
-            npm audit --audit-level=critical              
+            # npm audit fix --audit-level=critical --force
+            # npm audit --audit-level=critical
 
 workflows:
   default:
