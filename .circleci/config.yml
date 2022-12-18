@@ -6,6 +6,7 @@ commands:
     parameters:
       workflow_id:
         type: string
+        # default: ${CIRCLECI_WORKFLOW_ID:0:7}
     steps:
       - run:
           name: Destroy environments
@@ -106,8 +107,8 @@ jobs:
             cd backend
             rm -r node_modules
             npm install
-            # npm audit fix --audit-level=critical --force
-            # npm audit --audit-level=critical
+            npm audit fix --audit-level=critical --force
+            npm audit --audit-level=critical
 
   deploy-infrastructure:
     docker:
