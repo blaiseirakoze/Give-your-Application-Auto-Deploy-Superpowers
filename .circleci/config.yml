@@ -170,7 +170,7 @@ jobs:
 
   run-migrations:
     docker:
-      - image: python:3.7-alpine3.16
+      - image: python:3.7-alpine3.17
     steps:
       - checkout
       - run:
