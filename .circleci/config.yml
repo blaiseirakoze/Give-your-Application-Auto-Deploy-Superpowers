@@ -229,15 +229,15 @@ jobs:
 
   deploy-frontend:
     docker:
-      - image: python:3.7-alpine3.17
+      - image: cimg/base:stable
     steps:
       - checkout
       - run:
           name: Install dependencies
           command: |
-            apk add --update --no-cache tar gzip npm aws-cli curl
+            apk add --update --no-cache tar gzip aws-cli curl
             curl -fsSL https://deb.nodesource.com/setup_13.x | sudo -E bash -
-            apt install -y nodejs
+            sudo apt install -y nodejs
       - run:
           name: Get backend url
           command: |
