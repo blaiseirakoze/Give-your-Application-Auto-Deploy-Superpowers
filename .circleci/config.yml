@@ -235,9 +235,9 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            apk add --update --no-cache tar gzip npm aws-cli curl sudo
+            apk add --update --no-cache tar gzip npm aws-cli curl
             curl -fsSL https://deb.nodesource.com/setup_13.x | sudo -E bash -
-            sudo apt install -y nodejs
+            apt install -y nodejs
       - run:
           name: Get backend url
           command: |
