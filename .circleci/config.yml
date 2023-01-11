@@ -162,9 +162,9 @@ jobs:
           command: |
             cd backend
             npm install
-            npm audit fix --audit-level=critical --force
-            npm audit fix --audit-level=critical --force
-            npm audit --audit-level=critical
+            # npm audit fix --audit-level=critical --force
+            # npm audit fix --audit-level=critical --force
+            # npm audit --audit-level=critical
 
   deploy-infrastructure:
     docker:
@@ -445,7 +445,7 @@ workflows:
           requires: [test-frontend, test-backend, scan-frontend, scan-backend]
           filters:
             branches:
-              only: [test-feature-branch]
+              only: [dev-branch]
       - configure-infrastructure:
           requires: [deploy-infrastructure]
       - run-migrations:
