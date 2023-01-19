@@ -1,0 +1,8 @@
+Public Url to GitHub repository (not private) [URL01]
+    https://github.com/blaiseirakoze/Give-your-Application-Auto-Deploy-Superpowers
+
+Public URL for your S3 Bucket (aka, your green candidate front-end) [URL02]
+    http://udapeople-8c5e9df.s3-website-us-east-1.amazonaws.com/
+
+Evidence of deployed and functioning Frontend in CloudFront. [URL03]
+    https://dp8z33gx4nnmg.cloudfront.net/#/employees
